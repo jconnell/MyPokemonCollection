@@ -10,7 +10,7 @@ body {
   background-color: #8B9191;
 }
 
-.btn-primary.hover,.btn-primary:hover {
+.btn-primary:hover,.btn-primary:focus {
   background-color: #D73A36;
 }
 
@@ -23,7 +23,7 @@ body {
   position: relative;
 }
 
-.login-link.hover,.login-link:hover {
+.login-link:hover {
   color: #EA4D49;
 }
 

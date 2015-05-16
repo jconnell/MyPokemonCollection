@@ -7,6 +7,7 @@ gem 'rails', '4.2.1'
 gem 'sqlite3'
 # Use sass-rails for great good
 gem 'flat-ui-sass', github: 'wingrunr21/flat-ui-sass'
+gem 'rake', '10.4.2'
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -14,7 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+# Use devise for authentication
+gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

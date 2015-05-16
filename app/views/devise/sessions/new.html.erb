@@ -6,15 +6,26 @@
 	<h4>Welcome to <small>My Pokemon Collection</small></h4>
       </div>
       <div class="login-form">
+	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 	<div class="form-group">
-	  <input type="text" class="form-control login-field" value="" placeholder="Enter your username" id="login-name" />
-	  <label class="login-field-icon fui-user" for="login-name"></label>
+	  <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control login-field", id: "mail"  %>
 	</div>
+
 	<div class="form-group">
-	  <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
-	  <label class="login-field-icon fui-lock" for="login-pass"></label>
+	  <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control login-field", id: "password" %>
 	</div>
-	<a class="btn btn-primary btn-lg btn-block" href="#">Log in</a>
+
+	<div class="actions">
+	  <%= f.submit "Log in", class: "btn btn-primary btn-lg btn-block" %>
+	</div>
+
+	<% if devise_mapping.rememberable? -%>
+	<div class="form-group">
+	  <%= f.check_box :remember_me %>
+	  <%= f.label :remember_me %>
+	</div>
+	<% end %>
+
 	<div class="row">
 	  <div class="col-xs-6">
 	    <%= link_to "Lost your password?", new_password_path(:user), class: "login-link" %>
@@ -23,6 +34,7 @@
 	    <%= link_to "Sign up", new_registration_path(:user), class: "login-link" %>
           </div>
 	</div>
+	<% end %>
       </div>
     </div>
   </div>

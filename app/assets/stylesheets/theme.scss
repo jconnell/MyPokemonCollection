@@ -32,6 +32,7 @@ body {
   padding: 24px 23px 20px;
   position: relative;
   border-radius: $border-radius-large;  
+  min-width: 559px;
 
   // Ear
   &:before {

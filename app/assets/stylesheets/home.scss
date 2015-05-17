@@ -2,66 +2,70 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$background: #2980B9;
+$color: #D6EAF8;
+$highlight: #ECF0F1;
+
 .navbar-default {
-    background-color: #BDC3C7;
+    background-color: $background;
 }
 
 .navbar-default .navbar-brand {
-    color: #fff;
+    color: $color;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #E74C3C;
+    color: $highlight;
 }
 
 .navbar-default .navbar-brand:focus {
-    color: #E74C3C;
+    color: $highlight;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #fff;
+    color: $color;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: #E74C3C;
+    color: $highlight;
 }
 
 .navbar-default .navbar-nav>li>a:focus {
-    color: #E74C3C;
+    color: $highlight;
 }
 
 .navbar-default .navbar-nav>.dropdown>a .caret {
-    border-top-color: #fff;
-    border-bottom-color: #fff;
+    border-top-color: $color;
+    border-bottom-color: $color;
 }
 
 .navbar-default .navbar-nav>.dropdown>a:hover {
-    border-top-color: #E74C3C;
-    border-bottom-color: #E74C3C;
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
 }
 
 .navbar-default .navbar-nav>.dropdown>a:focus {
-    border-top-color: #E74C3C;
-    border-bottom-color: #E74C3C;
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
 }
 
 .navbar-default .navbar-nav>.dropdown>a:hover .caret {
-    border-top-color: #E74C3C;
-    border-bottom-color: #E74C3C;
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
 }
 
 .navbar-default .navbar-nav>.dropdown>a:focus .caret {
-    border-top-color: #E74C3C;
-    border-bottom-color: #E74C3C;
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
 }
 
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-											color: #E74C3C;
+											color: $highlight;
 											background-color: transparent;
 										    }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-										    color: #E74C3C;
+										    color: $highlight;
 										    background-color: transparent;
 										}

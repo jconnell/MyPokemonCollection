@@ -15,6 +15,7 @@ $(document).ready(function() {
 	$('[data-toggle="checkbox"]').radiocheck();
 	$('[data-toggle="radio"]').radiocheck();
 	// Password match
+	$("#password").keyup(checkPasswordMatch);
 	$("#password-confirm").keyup(checkPasswordMatch);
     });
 });

@@ -2,7 +2,7 @@ body {
     font-family: Lato,Helvetica,Arial,sans-serif;
     font-size: 18px;
     line-height: 1.72222;
-    color: #34495e;
+    color: #fff;
     background-color: #E74C3C;
 }
 
@@ -32,6 +32,7 @@ body {
   padding: 24px 23px 20px;
   position: relative;
   border-radius: 6px;
+  width: 559px;
   min-width: 559px;
 
   .login-field {

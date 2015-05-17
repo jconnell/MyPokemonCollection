@@ -1,33 +1,37 @@
 <div class="container">
-  <h2>Sign up</h2>
-  <div class="login-form">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+  <div class="login">
+    <div class="login-screen">
+      <h4>Sign up</h4>
+      <div class="login-form">
+	<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	  <%= devise_error_messages! %>
   
-    <div class="form-group">
-      <%= f.text_field :username, autofocus: true, placeholder: "Username", class: "form-control login-field", id: "username"  %>
-      <label class="login-field-icon fui-user" for="username"></label>
-    </div>
+	  <div class="form-group">
+	    <%= f.text_field :username, autofocus: true, placeholder: "Username", class: "form-control login-field", id: "username"  %>
+	    <label class="login-field-icon fui-user" for="username"></label>
+	  </div>
 
-    <div class="form-group">
-      <%= f.email_field :email, placeholder: "Email", class: "form-control login-field", id: "mail"  %>
-      <label class="login-field-icon fui-mail" for="mail"></label>
-    </div>
+	  <div class="form-group">
+	    <%= f.email_field :email, placeholder: "Email", class: "form-control login-field", id: "mail"  %>
+	    <label class="login-field-icon fui-mail" for="mail"></label>
+	  </div>
 
-    <div class="form-group">
-      <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control login-field", id: "password" %>
-      <label class="login-field-icon fui-lock" for="password" id="password-label"></label>
-    </div>
+	  <div class="form-group">
+	    <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control login-field", id: "password" %>
+	    <label class="login-field-icon fui-lock" for="password" id="password-label"></label>
+	  </div>
 
-    <div class="form-group">
-      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm password", class: "form-control login-field", id: "password-confirm" %>
-      <label class="login-field-icon fui-cross" for="password-confirm" id="password-confirm-label"></label>
-    </div>
+	  <div class="form-group">
+	    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm password", class: "form-control login-field", id: "password-confirm" %>
+	    <label class="login-field-icon fui-cross" for="password-confirm" id="password-confirm-label"></label>
+	  </div>
 
-    <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-primary btn-lg btn-block" %>
+	  <div class="actions">
+	    <%= f.submit "Sign up", class: "btn btn-primary btn-lg btn-block" %>
+	  </div>
+	  <%= link_to "Back", "/", class: "login-link" %>
+	<% end %>
+      </div>
     </div>
-    <% end %>
-
   </div>
 </div>

@@ -6,9 +6,9 @@ gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use sass-rails for great good
-gem 'flat-ui-sass', github: 'wingrunr21/flat-ui-sass'
-gem 'rake', '10.4.2'
 gem 'sass-rails'
+# Lock that rake
+gem 'rake', '10.4.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

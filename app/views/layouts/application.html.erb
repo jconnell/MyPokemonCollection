@@ -2,9 +2,14 @@
 <html>
 <head>
   <title>MyPokemonCollection</title>
-  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag '/favicon.ico' %>
+  <%= stylesheet_link_tag    'bootstrap.min.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'flat-ui.css', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.min.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'flat-ui.min.js', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'theme' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,6 +17,4 @@
 <%= yield %>
 
 </body>
-  <%= javascript_include_tag 'jquery.min.js', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'flat-ui.min.js', 'data-turbolinks-track' => true %>
 </html>

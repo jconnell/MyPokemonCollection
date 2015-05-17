@@ -1,22 +1,22 @@
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $text-color;
-  background-color: #D73A36;
+    font-family: Lato,Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 1.72222;
+    color: #34495e;
+    background-color: #E74C3C;
 }
 
 .btn-primary {
-  background-color: #8B9191;
+  background-color: #95A5A6;
 }
 
 .btn-primary:hover,.btn-primary:focus {
-  background-color: #D73A36;
+  background-color: #E74C3C;
 }
 
 .login {
-  background: #D73A36;
-  background-size: 940px 778px;  
+  background: #E74C3C;
+  background-size: 940px 778px;
   color: #FFFFFF;
   margin-bottom: 77px;
   padding: 38px 38px 267px;
@@ -24,59 +24,46 @@ body {
 }
 
 .login-link:hover,.login-link:focus{
-  color: #EA4D49;
+  color: #E74C3C;
 }
 
 .login-form {
-  background-color: $form-color;
+  background-color: #edeff1;
   padding: 24px 23px 20px;
   position: relative;
-  border-radius: $border-radius-large;  
+  border-radius: 6px;
   min-width: 559px;
 
-  // Ear
-  &:before {
-    content: '';
-    border-style: solid;
-    border-width: 0px 0px 0px 0;
-    border-color: transparent $form-color transparent transparent;
-    height: 0;
-    position: absolute;
-    left: -12px;
-    top: 35px;
-    width: 0;    
-    -webkit-transform: rotate(360deg); // Make corners smooth
-  }
-  .control-group {
-    margin-bottom: 6px;
-    position: relative;
-  }
   .login-field {
     border-color: transparent;
     font-size: 17px;
     text-indent: 3px;
     
     &:focus {
-      border-color: #EA4D49;
+      border-color: #E74C3C;
       
       & + .login-field-icon {
-        color: #EA4D49;
-      }  
-    }    
+        color: #E74C3C;
+      }
+    }
   }
-  .login-field-icon {
-    color: mix($gray, $inverse, 60%);
-    font-size: 16px;
-    position: absolute;
-    right: 15px;
-    top: 3px;
-    @include transition(.25s);
-  }  
 }
 
 .login-screen {
-  background-color: #D73A36;
+  background-color: #E74C3C;
   color: #FFFFFF;
   min-height: 473px;
   padding: 123px 199px 33px 306px;
+}
+
+.icon-checked:before,.icon-checked:before {
+    font-family: Flat-UI-Pro-Icons;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    speak: none;
+    color: #E74C3C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

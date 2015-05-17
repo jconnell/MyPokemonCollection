@@ -69,3 +69,59 @@ $highlight: #ECF0F1;
 										    color: $highlight;
 										    background-color: transparent;
 										}
+.row .recently-added-col {
+  width: 800px;
+  margin-left: -5px;
+}
+
+.row [class*="col"] {
+    float: left;
+    min-height: 1px;
+}
+
+.pokemon {
+    padding: 15px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.214;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.pokemon-item {
+    float: left;
+    width: 140px;
+    margin: 0 0 20px 20px;
+}
+
+.electric-name {
+    background-color: #F1C40F;
+}
+
+.electric-sprite {
+    background-color: #F39C12;
+}
+
+.fire-name {
+    background-color: #E67E22;
+}
+
+.fire-sprite {
+    background-color: #D35400;
+}
+
+.plant-name {
+    background-color: #2ECC71;
+}
+
+.plant-sprite {
+    background-color: #27AE60;
+}
+
+.water-name {
+    background-color: #3498DB;
+}
+
+.water-sprite {
+    background-color: #2980B9;
+}

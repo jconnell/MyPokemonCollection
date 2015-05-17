@@ -1,26 +1,75 @@
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="container">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-      <span class="sr-only">Toggle navigation</span>
-    </button>
-    <a class="navbar-brand" href="/">MPC</a>
+<%= render "nav" %>
+
+<div class="container">
+  <h4>Recently Added</h4>
+  <div class="row">
+    <div class="recently-added-col">
+      <div class="pokemon-item">
+	<dl class="pokemon electric-name">
+	  <h7>Pikachu</h7>
+	</dl>
+	<dl class="pokemon electric-sprite">
+	  <img src="http://pokeapi.co/media/img/25.png" width="100px" />
+	</dl>
+      </div>
+      <div class="pokemon-item">
+	<dl class="pokemon water-name">
+	  <h7>Squirtle</h7>
+	</dl>
+	<dl class="pokemon water-sprite">
+	  <img src="http://pokeapi.co/media/img/7.png" width="100px" />
+	</dl>
+      </div>
+      <div class="pokemon-item">
+	<dl class="pokemon plant-name">
+	  <h7>Bulbasaur</h7>
+	</dl>
+	<dl class="pokemon plant-sprite">
+	  <img src="http://pokeapi.co/media/img/1.png" width="100px" />
+	</dl>
+      </div>
+      <div class="pokemon-item">
+	<dl class="pokemon fire-name">
+	  <h7>Charmander</h7>
+	</dl>
+	<dl class="pokemon fire-sprite">
+	  <img src="http://pokeapi.co/media/img/4.png" width="100px" />
+	</dl>
+      </div>
+    </div>
   </div>
-  <div class="collapse navbar-collapse" id="navbar-collapse-01">
-    <ul class="nav navbar-nav">
-      <li><a href="#fakelink">My Collection</a></li>
-      <li><a href="#fakelink">Add Pokemon</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %> <b class="caret"></b></a>
-	<span class="dropdown-arrow"></span>
-	<ul class="dropdown-menu">
-	  <li><a href="#">My Profile</a></li>
-	  <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-	</ul>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav><!-- /navbar -->
+
+  <h4>My Collection</h4>
+  <table class="table table-striped">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Bulbasaur</td>
+      <td>1</td>
+      <td>Plant, Poison</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Charmander</td>
+      <td>1</td>
+      <td>Fire</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Squirtle</td>
+      <td>1</td>
+      <td>Water</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Pikachu</td>
+      <td>1</td>
+      <td>Electric</td>
+    </tr>
+  </table>
+</div>

@@ -1,29 +1,26 @@
-<div class="container">
-  <div class="login">
-    <div class="login-screen">
-      <div class="login-icon">
-	<%= image_tag("premierball.png") %>
-	<h4>Welcome to <small>My Pokemon Collection</small></h4>
-      </div>
-      <div class="login-form">
-	<div class="form-group">
-	  <input type="text" class="form-control login-field" value="" placeholder="Enter your username" id="login-name" />
-	  <label class="login-field-icon fui-user" for="login-name"></label>
-	</div>
-	<div class="form-group">
-	  <input type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
-	  <label class="login-field-icon fui-lock" for="login-pass"></label>
-	</div>
-	<a class="btn btn-primary btn-lg btn-block" href="#">Log in</a>
-	<div class="row">
-	  <div class="col-xs-6">
-	    <%= link_to "Lost your password?", new_password_path(:user), class: "login-link" %>
-	  </div>
-	  <div class="col-xs-6">
-	    <%= link_to "Sign up", new_registration_path(:user), class: "login-link" %>
-          </div>
-	</div>
-      </div>
-    </div>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="/">MPC</a>
   </div>
-</div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+    <ul class="nav navbar-nav">
+      <li><a href="#fakelink">My Collection</a></li>
+      <li><a href="#fakelink">Add Pokemon</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %> <b class="caret"></b></a>
+	<span class="dropdown-arrow"></span>
+	<ul class="dropdown-menu">
+	  <li><a href="#">My Profile</a></li>
+	  <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+	</ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav><!-- /navbar -->

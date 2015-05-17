@@ -1,3 +1,67 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar-default {
+    background-color: #BDC3C7;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #E74C3C;
+}
+
+.navbar-default .navbar-brand:focus {
+    color: #E74C3C;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #E74C3C;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+    color: #E74C3C;
+}
+
+.navbar-default .navbar-nav>.dropdown>a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:hover {
+    border-top-color: #E74C3C;
+    border-bottom-color: #E74C3C;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:focus {
+    border-top-color: #E74C3C;
+    border-bottom-color: #E74C3C;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:hover .caret {
+    border-top-color: #E74C3C;
+    border-bottom-color: #E74C3C;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:focus .caret {
+    border-top-color: #E74C3C;
+    border-bottom-color: #E74C3C;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+											color: #E74C3C;
+											background-color: transparent;
+										    }
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+										    color: #E74C3C;
+										    background-color: transparent;
+										}

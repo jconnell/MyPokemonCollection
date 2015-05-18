@@ -69,6 +69,31 @@ $highlight: #ECF0F1;
 										    color: $highlight;
 										    background-color: transparent;
 										}
+.navbar-default .navbar-text {
+    color: $color;
+}
+
+p.navbar-text>a {
+    color: $color;
+    text-decoration: none;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+p.navbar-text>a:hover {
+    color: $highlight;
+    text-decoration: none;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+p.navbar-text>a:focus {
+    color: $highlight;
+    text-decoration: none;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
 .row .recently-added-col {
   width: 800px;
   margin-left: -5px;

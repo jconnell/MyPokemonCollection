@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pokemons
   devise_for :users
   root 'home#index'
 

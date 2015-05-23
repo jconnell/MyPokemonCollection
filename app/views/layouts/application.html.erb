@@ -13,8 +13,12 @@
 </head>
 <body>
 
-  <%= render "layouts/nav" %>
+  <% if ["registrations", "sessions"].include? params[:controller] -%>
+    <%= render "layouts/nav" %>
+  <% end %>
   <%= yield %>
-  <%= render "layouts/footer" %>
+  <% if ["registrations", "sessions"].include? params[:controller] -%>
+    <%= render "layouts/footer" %>
+  <% end %>
 </body>
 </html>

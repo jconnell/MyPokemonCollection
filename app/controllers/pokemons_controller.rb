@@ -56,7 +56,7 @@ class PokemonsController < ApplicationController
   def destroy
     @pokemon.destroy
     respond_to do |format|
-      format.html { redirect_to pokemons_url, notice: 'Pokemon was successfully destroyed.' }
+      format.html { redirect_to '/', notice: 'Pokemon was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

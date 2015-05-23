@@ -39,35 +39,32 @@
 
   <h4>My Collection</h4>
   <table class="table table-striped">
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Level</th>
-      <th>Type</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Bulbasaur</td>
-      <td>1</td>
-      <td>Plant, Poison</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Charmander</td>
-      <td>1</td>
-      <td>Fire</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Squirtle</td>
-      <td>1</td>
-      <td>Water</td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>Pikachu</td>
-      <td>1</td>
-      <td>Electric</td>
-    </tr>
+    <thead>
+      <tr>
+	<th>User</th>
+	<th>Dex number</th>
+	<th>Type 1</th>
+	<th>Type 2</th>
+	<th>Name</th>
+	<th>Level</th>
+	<th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @pokemons.each do |pokemon| %>
+	<tr>
+          <td><%= pokemon.user_id %></td>
+          <td><%= pokemon.dex_number %></td>
+          <td><%= pokemon.type_1 %></td>
+          <td><%= pokemon.type_2 %></td>
+          <td><%= pokemon.name %></td>
+          <td><%= pokemon.level %></td>
+          <td><%= link_to 'Show', pokemon %></td>
+          <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+          <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+      <% end %>
+    </tbody>
   </table>
 </div>

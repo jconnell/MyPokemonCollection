@@ -13,12 +13,12 @@
 </head>
 <body>
 
-  <% if ["registrations", "sessions"].include? params[:controller] -%>
+  <% if ["home", "pokemons"].include? params[:controller] -%>
     <%= render "layouts/nav" %>
-  <% end %>
+  <% end -%>
   <%= yield %>
-  <% if ["registrations", "sessions"].include? params[:controller] -%>
+  <% if ["home", "pokemons"].include? params[:controller] -%>
     <%= render "layouts/footer" %>
-  <% end %>
+  <% end -%>
 </body>
 </html>

@@ -11,29 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+  <%= f.text_field :user_id, hidden: true, value: current_user.id %>
+  
+  <div class="field form-group">
+    <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
   </div>
-  <div class="field">
-    <%= f.label :dex_number %><br>
-    <%= f.number_field :dex_number %>
-  </div>
-  <div class="field">
-    <%= f.label :type_1 %><br>
-    <%= f.text_field :type_1 %>
-  </div>
-  <div class="field">
-    <%= f.label :type_2 %><br>
-    <%= f.text_field :type_2 %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :level %><br>
-    <%= f.number_field :level %>
+   <div class="field form-group">
+    <%= f.number_field :level, class: "form-control", placeholder: "Level" %>
   </div>
   <div class="actions">
     <%= f.submit %>

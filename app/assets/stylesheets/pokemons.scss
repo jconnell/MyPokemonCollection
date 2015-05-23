@@ -1,0 +1,152 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$background: #2980B9;
+$color: #D6EAF8;
+$highlight: #ECF0F1;
+
+.navbar-default {
+    background-color: $background;
+}
+
+.navbar-default .navbar-brand {
+    color: $color;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: $highlight;
+}
+
+.navbar-default .navbar-brand:focus {
+    color: $highlight;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: $color;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: $highlight;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+    color: $highlight;
+}
+
+.navbar-default .navbar-nav>.dropdown>a .caret {
+    border-top-color: $color;
+    border-bottom-color: $color;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:hover {
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:focus {
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:hover .caret {
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
+}
+
+.navbar-default .navbar-nav>.dropdown>a:focus .caret {
+    border-top-color: $highlight;
+    border-bottom-color: $highlight;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+											color: $highlight;
+											background-color: transparent;
+										    }
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+										    color: $highlight;
+										    background-color: transparent;
+										}
+.navbar-default .navbar-text {
+    color: $color;
+}
+
+p.navbar-text>a {
+    color: $color;
+    text-decoration: none;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+p.navbar-text>a:hover {
+    color: $highlight;
+    text-decoration: none;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+p.navbar-text>a:focus {
+    color: $highlight;
+    text-decoration: none;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+.row .recently-added-col {
+  width: 800px;
+  margin-left: -5px;
+}
+
+.row [class*="col"] {
+    float: left;
+    min-height: 1px;
+}
+
+.pokemon {
+    padding: 15px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.214;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.pokemon-item {
+    float: left;
+    width: 140px;
+    margin: 0 0 20px 20px;
+}
+
+.electric-name {
+    background-color: #F1C40F;
+}
+
+.electric-sprite {
+    background-color: #F39C12;
+}
+
+.fire-name {
+    background-color: #E67E22;
+}
+
+.fire-sprite {
+    background-color: #D35400;
+}
+
+.plant-name {
+    background-color: #2ECC71;
+}
+
+.plant-sprite {
+    background-color: #27AE60;
+}
+
+.water-name {
+    background-color: #3498DB;
+}
+
+.water-sprite {
+    background-color: #2980B9;
+}

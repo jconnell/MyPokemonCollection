@@ -13,3 +13,4 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require turbolinks
+//= require twitter/typeahead

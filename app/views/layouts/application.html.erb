@@ -8,11 +8,11 @@
   <%= stylesheet_link_tag params[:controller], media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'flat-ui.min.js', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'theme' %>
+  <%= javascript_include_tag 'theme', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'pokemon', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
   <% if ["home", "pokemons"].include? params[:controller] -%>
     <%= render "layouts/nav" %>
   <% end -%>

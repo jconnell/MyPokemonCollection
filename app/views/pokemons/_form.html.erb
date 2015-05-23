@@ -14,12 +14,12 @@
   <%= f.text_field :user_id, hidden: true, value: current_user.id %>
   
   <div class="field form-group">
-    <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Name", id: "typeahead-pokemon" %>
   </div>
    <div class="field form-group">
     <%= f.number_field :level, class: "form-control", placeholder: "Level" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", class: "btn btn-info" %>
   </div>
 <% end %>

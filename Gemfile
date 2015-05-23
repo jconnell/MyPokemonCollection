@@ -21,9 +21,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-gem 'jquery-turbolinks'
 # Typeahead
 gem 'twitter-typeahead-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

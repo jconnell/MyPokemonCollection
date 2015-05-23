@@ -3,13 +3,12 @@
 <head>
   <title>MyPokemonCollection</title>
   <%= favicon_link_tag '/favicon.ico' %>
-  <%= stylesheet_link_tag    'bootstrap.min.css', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'flat-ui.css', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag params[:controller], media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'flat-ui.min.js', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'theme', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'pokemon', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap.min.css', media: 'all' %>
+  <%= stylesheet_link_tag    'flat-ui.css', media: 'all' %>
+  <%= stylesheet_link_tag params[:controller], media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'flat-ui.min.js' %>
+  <%= javascript_include_tag 'theme' %>
   <%= csrf_meta_tags %>
 </head>
 <body>

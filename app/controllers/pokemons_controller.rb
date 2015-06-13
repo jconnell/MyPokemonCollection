@@ -26,6 +26,12 @@ class PokemonsController < ApplicationController
   def create
     @pokemon = Pokemon.new(pokemon_params)
 
+    pokedex = JSON.parse(Pokegem.get('pokedex', 1))['pokemon']
+    selected_pokemon = pokedex.select{|hash| hash["name"] == @pokemon.name.downcase }[0]
+    dex_number = selected_pokemon['resource_uri'].split('/')[-1].to_i
+
+    @pokemon.dex_number = dex_number
+
     respond_to do |format|
       if @pokemon.save
         format.html { redirect_to @pokemon, notice: 'Pokemon was successfully created.' }

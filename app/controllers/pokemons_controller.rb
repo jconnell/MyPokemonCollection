@@ -29,7 +29,9 @@ class PokemonsController < ApplicationController
     pokedex = JSON.parse(Pokegem.get('pokedex', 1))['pokemon']
     selected_pokemon = pokedex.select{|hash| hash["name"] == @pokemon.name.downcase }[0]
     dex_number = selected_pokemon['resource_uri'].split('/')[-1].to_i
-
+    pokemon_info = JSON.parse(Pokegem.get('pokemon', dex_number))
+    @pokemon.type_1 = pokemon_info['types'][0]['name']
+    @pokemon.type_2 = pokemon_info['types'].length > 1 ? pokemon_info['types'][1]['name'] : nil
     @pokemon.dex_number = dex_number
 
     respond_to do |format|

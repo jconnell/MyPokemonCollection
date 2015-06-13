@@ -10,6 +10,9 @@ class PokemonsController < ApplicationController
   # GET /pokemons/1
   # GET /pokemons/1.json
   def show
+    @pokemon_info = JSON.parse(Pokegem.get('pokemon', @pokemon.dex_number))
+    @sprite_number = @pokemon_info['sprites'][0]['resource_uri'].split('/')[-1]
+    @sprite_url = 'http://pokeapi.co/' + JSON.parse(Pokegem.get('sprite', @sprite_number))['image']
   end
 
   # GET /pokemons/new

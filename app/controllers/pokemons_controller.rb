@@ -1,3 +1,4 @@
+# coding: utf-8
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
 
@@ -32,8 +33,9 @@ class PokemonsController < ApplicationController
     pokedex = JSON.parse(Pokegem.get('pokedex', 1))['pokemon']
 
     # First try to grab a pokemon with a name equal to name supplied
-    # by the user.
-    selected_pokemon = pokedex.select{|hash| hash["name"] == @pokemon.name.downcase }
+    # by the user. Replace sex characters for nidoran.
+    pokemon_name = @pokemon.name.gsub(/♀/, '-f').gsub(/♂/, '-m').downcase
+    selected_pokemon = pokedex.select{|hash| hash["name"] == pokemon_name }
 
     # If we couldn't match the name outright, let's match is with a
     # regular expression.

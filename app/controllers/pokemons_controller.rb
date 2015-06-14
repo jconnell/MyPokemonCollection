@@ -30,13 +30,22 @@ class PokemonsController < ApplicationController
     @pokemon = Pokemon.new(pokemon_params)
 
     pokedex = JSON.parse(Pokegem.get('pokedex', 1))['pokemon']
-    selected_pokemon = pokedex.select{|hash| hash["name"] == @pokemon.name.downcase }[0]
 
-    if selected_pokemon.nil?
-      selected_pokemon = pokedex.select{|hash| /#{@pokemon.name.downcase}/ =~ hash["name"] }[0]
+    # First try to grab a pokemon with a name equal to name supplied
+    # by the user.
+    selected_pokemon = pokedex.select{|hash| hash["name"] == @pokemon.name.downcase }
+
+    # If we couldn't match the name outright, let's match is with a
+    # regular expression.
+    if selected_pokemon.nil? || selected_pokemon.empty?
+      selected_pokemon = pokedex.select{|hash| /#{@pokemon.name.downcase}/ =~ hash["name"] }
     end
 
-    dex_number = selected_pokemon['resource_uri'].split('/')[-1].to_i
+    # Sort the array of pokemon with matching names by their pokedex
+    # number and blindly take the first pokemon in the list.
+    pokemon = selected_pokemon.sort_by { |hash| hash['resource_uri'].split('/')[-1].to_i }[0]
+
+    dex_number = pokemon['resource_uri'].split('/')[-1].to_i
 
     pokemon_info = JSON.parse(Pokegem.get('pokemon', dex_number))
     @pokemon.type_1 = pokemon_info['types'][0]['name']

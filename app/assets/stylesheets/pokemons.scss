@@ -150,3 +150,9 @@ p.navbar-text>a:focus {
 .water-sprite {
     background-color: #2980B9;
 }
+
+.form-control {
+    &:focus {
+	border-color: #3498DB;
+    }
+}

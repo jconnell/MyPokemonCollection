@@ -5,21 +5,25 @@
 
       <ul>
       <% @pokemon.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+	<li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <%= f.text_field :user_id, hidden: true, value: current_user.id %>
-  
-  <div class="field form-group">
-    <%= f.text_field :name, class: "form-control", placeholder: "Name", id: "typeahead-pokemon" %>
-  </div>
-   <div class="field form-group">
-    <%= f.number_field :level, class: "form-control", placeholder: "Level" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Submit", class: "btn btn-info" %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.text_field :user_id, hidden: true, value: current_user.id %>
+
+      <div class="field form-group">
+	<%= f.text_field :name, class: "form-control", placeholder: "Name", id: "typeahead-pokemon", autofocus: true %>
+      </div>
+      <div class="field form-group">
+	<%= f.number_field :level, class: "form-control", placeholder: "Level" %>
+      </div>
+      <div class="actions">
+	<%= f.submit "Submit", class: "btn btn-info" %>
+      </div>
+    </div>
   </div>
 <% end %>

@@ -50,8 +50,8 @@ class PokemonsController < ApplicationController
     dex_number = pokemon['resource_uri'].split('/')[-1].to_i
 
     pokemon_info = JSON.parse(Pokegem.get('pokemon', dex_number))
-    @pokemon.type_1 = pokemon_info['types'][0]['name']
-    @pokemon.type_2 = pokemon_info['types'].length > 1 ? pokemon_info['types'][1]['name'] : nil
+    @pokemon.type_1 = pokemon_info['types'][0]['name'].capitalize
+    @pokemon.type_2 = pokemon_info['types'].length > 1 ? pokemon_info['types'][1]['name'].capitalize : nil
     @pokemon.dex_number = dex_number
 
     respond_to do |format|

@@ -12,13 +12,8 @@
   </p>
 
   <p>
-    <strong>Type 1:</strong>
-    <%= @pokemon.type_1 %>
-  </p>
-
-  <p>
-    <strong>Type 2:</strong>
-    <%= @pokemon.type_2 %>
+    <strong>Types</strong>
+    <%= @pokemon.type_1 %><% if @pokemon.type_2 %><%= ", #{@pokemon.type_2}" %><% end %>
   </p>
 
   <p>

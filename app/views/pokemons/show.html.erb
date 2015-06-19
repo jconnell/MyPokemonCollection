@@ -4,28 +4,54 @@
       <p id="notice"><%= notice %></p>
     </div>
   <% end -%>
+  <div class="row">
+    <div class="col-md-3">
+      <h1><%= @pokemon.name %></h1>
+      <h4>Level <%= @pokemon.level %></h4>
+    </div>
+    <div class="col-md-1">
+      <%= image_tag @sprite_url %>
+    </div>
+  </div>
 
-  <%= image_tag @sprite_url %>
-  <p>
-    <strong>Dex number:</strong>
-    <%= @pokemon.dex_number %>
-  </p>
+  <div class="row">
+    <div class="col-md-6">
 
-  <p>
-    <strong>Types</strong>
-    <%= @pokemon.type_1 %><% if @pokemon.type_2 %><%= ", #{@pokemon.type_2}" %><% end %>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= @pokemon.name %>
-  </p>
-
-  <p>
-    <strong>Level:</strong>
-    <%= @pokemon.level %>
-  </p>
-
-  <%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
-  <%= link_to 'Back', '/' %>
+    </div>
+    <div class="col-md-6">
+      <h3>Pokédex data</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>National №</td>
+            <td><%= @pokemon.dex_number %></td>
+          </tr>
+          <tr>
+            <td>Type</td>
+            <td><%= @pokemon.type_1 %><% if @pokemon.type_2 %><%= ", #{@pokemon.type_2}" %><% end %></td>
+          </tr>
+	  <% if @pokemon_info['species'] != "" -%>
+            <tr>
+              <td>Species</td>
+              <td><%= @pokemon_info['species'] %></td>
+            </tr>
+	  <% end -%>
+          <tr>
+            <td>Height</td>
+            <td><%= @pokemon_info['height'] %></td>
+          </tr>
+          <tr>
+            <td>Weight</td>
+            <td><%= @pokemon_info['weight'] %></td>
+          </tr>
+          <tr>
+            <td>Abilities</td>
+            <td><%= @pokemon_info['abilities'].collect { |ability| ability['name'].capitalize }.join(", ") %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+    <%= link_to 'Back', '/' %>
+  </div>
 </div>

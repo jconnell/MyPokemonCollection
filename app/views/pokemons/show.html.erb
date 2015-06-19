@@ -61,16 +61,16 @@
 	  <% if @pokemon_info['species'] != "" -%>
             <tr>
               <td>Species</td>
-              <td><%= @pokemon_info['species'] %></td>
+              <td><%= @pokemon_info['species'].capitalize %></td>
             </tr>
 	  <% end -%>
           <tr>
             <td>Height</td>
-            <td><%= @pokemon_info['height'] %></td>
+            <td><%= @pokemon_info['height'].to_f / 10 %> m</td>
           </tr>
           <tr>
             <td>Weight</td>
-            <td><%= @pokemon_info['weight'] %></td>
+            <td><%= @pokemon_info['weight'].to_f / 10 %> kg</td>
           </tr>
           <tr>
             <td>Abilities</td>
